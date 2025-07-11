@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-11T11:46:28.379695" rpa="false" schemaversion="5">
+<suite id="s1" name="Robottestchallenge" source="F:\Dev\RobotPython\robottestchallenge">
+<suite id="s1-s1" name="TestCases" source="F:\Dev\RobotPython\robottestchallenge\TestCases">
+<suite id="s1-s1-s1" name="TestChallenge" source="F:\Dev\RobotPython\robottestchallenge\TestCases\TestChallenge.robot">
+<test id="s1-s1-s1-t1" name="Carousel_Test" line="9">
+<variable name="${expected_count}">
+<msg time="2025-07-11T11:46:29.412163" level="INFO">${expected_count} = 15</msg>
+<var>15</var>
+<status status="PASS" start="2025-07-11T11:46:29.412046" elapsed="0.000160"/>
+</variable>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-11T11:46:29.413128" level="INFO">Opening browser 'chrome' to base url 'https://www.mall.cz/'.</msg>
+<arg>https://www.mall.cz/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-11T11:46:29.412955" elapsed="6.140501"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-11T11:46:35.554329" level="INFO">Clicking button 'xpath://button[@type = 'button' and (text() = 'OK, souhlasím' or . = 'OK, souhlasím')]'.</msg>
+<arg>xpath://button[@type = 'button' and (text() = 'OK, souhlasím' or . = 'OK, souhlasím')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T11:46:35.553886" elapsed="0.145679"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://button[@type = 'button' and (text() = 'Zavřít' or . = 'Zavřít')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-11T11:46:35.699927" elapsed="0.026746"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T11:46:35.727415" level="INFO">Clicking element 'xpath://button[@type = 'button' and (text() = 'Zavřít' or . = 'Zavřít')]'.</msg>
+<arg>xpath://button[@type = 'button' and (text() = 'Zavřít' or . = 'Zavřít')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T11:46:35.727174" elapsed="0.074610"/>
+</kw>
+<variable name="${carousel_elements}">
+<msg time="2025-07-11T11:46:35.802470" level="INFO">${carousel_elements} = Get Webelements xpath://div[@id='productCarousel']</msg>
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel']</var>
+<status status="PASS" start="2025-07-11T11:46:35.802271" elapsed="0.000233"/>
+</variable>
+<variable name="${identifiers}">
+<msg time="2025-07-11T11:46:35.803004" level="INFO">${identifiers} = Create List Get Webelements xpath://div[@id='productCarousel']</msg>
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="PASS" start="2025-07-11T11:46:35.802843" elapsed="0.000205"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<msg time="2025-07-11T11:46:35.803587" level="INFO">Length is 50.</msg>
+<msg time="2025-07-11T11:46:35.803689" level="FAIL">Length of 'Get Webelements xpath://div[@id='productCarousel']' should be 15 but is 50.</msg>
+<arg>${carousel_elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="FAIL" start="2025-07-11T11:46:35.803379" elapsed="0.000452">Length of 'Get Webelements xpath://div[@id='productCarousel']' should be 15 but is 50.</status>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel4']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.804084" elapsed="0.000050"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.804380" elapsed="0.000032"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.804584" elapsed="0.000031"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.804923" elapsed="0.000044"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel7']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.805181" elapsed="0.000039"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.805396" elapsed="0.000032"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.805601" elapsed="0.000031"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.805908" elapsed="0.000041"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel8']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.806148" elapsed="0.000038"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.806453" elapsed="0.000032"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.806658" elapsed="0.000033"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.806934" elapsed="0.000033"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel9']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.807215" elapsed="0.000064"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.807472" elapsed="0.000027"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.807664" elapsed="0.000039"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.807940" elapsed="0.000029"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel10']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.808181" elapsed="0.000040"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.808520" elapsed="0.000043"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.808740" elapsed="0.000027"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.808981" elapsed="0.000026"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel11']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.809173" elapsed="0.000030"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.809390" elapsed="0.000038"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.809577" elapsed="0.000028"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.809973" elapsed="0.000033"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel12']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.810255" elapsed="0.000054"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.810583" elapsed="0.000039"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.810796" elapsed="0.000037"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.811073" elapsed="0.000035"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel13']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.811304" elapsed="0.000047"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.811531" elapsed="0.000035"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.811738" elapsed="0.000040"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.812051" elapsed="0.000040"/>
+</kw>
+<variable name="${carousel_elements}">
+<var>Get Webelements</var>
+<var>xpath://div[@id='productCarousel14']</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.812274" elapsed="0.000042"/>
+</variable>
+<variable name="${identifiers}">
+<var>Create List</var>
+<var>${carousel_elements}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.812576" elapsed="0.000038"/>
+</variable>
+<variable name="${unique}">
+<var>Evaluate</var>
+<var>${identifiers}</var>
+<status status="NOT RUN" start="2025-07-11T11:46:35.812783" elapsed="0.000035"/>
+</variable>
+<kw name="Length Should Be" owner="BuiltIn">
+<arg>${unique}</arg>
+<arg>${expected_count}</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="NOT RUN" start="2025-07-11T11:46:35.813030" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2025-07-11T11:46:29.411748" elapsed="6.401682">Length of 'Get Webelements xpath://div[@id='productCarousel']' should be 15 but is 50.</status>
+</test>
+<status status="FAIL" start="2025-07-11T11:46:28.411108" elapsed="7.402960"/>
+</suite>
+<status status="FAIL" start="2025-07-11T11:46:28.409781" elapsed="7.405247"/>
+</suite>
+<status status="FAIL" start="2025-07-11T11:46:28.381432" elapsed="7.434446"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robottestchallenge" id="s1" pass="0" fail="1" skip="0">Robottestchallenge</stat>
+<stat name="TestCases" id="s1-s1" pass="0" fail="1" skip="0">Robottestchallenge.TestCases</stat>
+<stat name="TestChallenge" id="s1-s1-s1" pass="0" fail="1" skip="0">Robottestchallenge.TestCases.TestChallenge</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
